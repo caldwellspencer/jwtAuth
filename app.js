@@ -50,6 +50,9 @@ let users = [
 // LOGIN ROUTE
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
+    console.log(req.body)
+    console.log(req.body.username);
+    console.log(req.body.password);
     // Use your DB ORM logic here to find user and compare password
     for (let user of users) { // I am using a simple array users which i made above
         if (username == user.username && password == user.password /* Use your password hash checking logic here !*/) {
